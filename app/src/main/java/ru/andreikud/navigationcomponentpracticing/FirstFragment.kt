@@ -11,7 +11,8 @@ class FirstFragment : Fragment(R.layout.fragment_first) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         view.findViewById<Button>(R.id.btnClick).setOnClickListener {
-            findNavController().navigate(R.id.action_firstFragment_to_secondFragment)
+            val action = FirstFragmentDirections.actionFirstFragmentToSecondFragment("Hello!")
+            findNavController().navigate(action)
         }
     }
 
