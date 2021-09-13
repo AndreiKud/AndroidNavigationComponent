@@ -15,7 +15,7 @@ class SecondFragment : Fragment(R.layout.fragment_second) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val textView = view.findViewById<TextView>(R.id.tvText)
-        textView.text = navigationArgs.msg
+        textView.text = requireArguments().getString("key")
 
         view.findViewById<TextView>(R.id.btnClick).setOnClickListener {
         }
